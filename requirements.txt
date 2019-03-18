@@ -1,0 +1,6 @@
+jsbeautifier
+matplotlib
+nltk
+scikit-image
+tensorflow-gpu==1.13.1
+tqdm
