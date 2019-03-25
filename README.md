@@ -35,6 +35,7 @@ mkdir ckpt
 tar zxvf inception_v4_2016_09_09.tar.gz -C ckpt
 git clone https://github.com/fengyang0317/unsupervised_captioning.git
 cd unsupervised_captioning
+export PYTHONPATH=$PYTHONPATH:`pwd`
 ```
 
 ### Dataset (Optional. The files generated below can be found at [here][1]).
@@ -42,7 +43,7 @@ cd unsupervised_captioning
 experiments in the paper are available at
 [link](https://drive.google.com/file/d/1z8JwNxER-ORWoAmVKBqM7MyPozk6St4M).
 You may download the descriptions from the link and extract the files to
-data/coco.)
+data/coco.
     ```
     pip3 install absl-py
     python3 preprocessing/crawl_descriptions.py
@@ -55,7 +56,8 @@ the number of the descriptions obtained may be different.
     python preprocessing/extract_descriptions.py
     ```
 
-3. Preprocess the descriptions.
+3. Preprocess the descriptions. You may need to change the vocab_size, start_id,
+and end_id in config.py if you generate a new dictionary.
     ```
     python preprocessing/process_descriptions.py --word_counts_output_file \ 
       data/word_counts.txt --new_dict
@@ -156,6 +158,7 @@ checkpoint is 18000.
 
 ### Credits
 Part of the code is from 
+[coco-caption](https://github.com/tylin/coco-caption),
 [im2txt](https://github.com/tensorflow/models/tree/master/research/im2txt),
 [tfgan](https://github.com/tensorflow/models/tree/master/research/gan),
 [resnet](https://github.com/tensorflow/models/tree/master/official/resnet),

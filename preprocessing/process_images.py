@@ -61,7 +61,7 @@ def gen_tfrec(split):
 
 
 def main(_):
-  for i in ['train', 'val']:
+  for i in ['train', 'val', 'test']:
     gen_tfrec(i)
 
 

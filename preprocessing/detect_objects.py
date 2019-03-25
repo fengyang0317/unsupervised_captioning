@@ -80,7 +80,9 @@ def main(_):
     train_images = list(f)
   with open('data/coco_val.txt', 'r') as f:
     val_images = list(f)
-  all_images = train_images + val_images
+  with open('data/coco_test.txt', 'r') as f:
+    test_images = list(f)
+  all_images = train_images + val_images + test_images
   with h5py.File('data/object.hdf5', 'w') as f:
     for ret in tqdm(pool.imap_unordered(run, all_images),
                     total=len(all_images)):
