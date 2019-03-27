@@ -1,6 +1,7 @@
 """Train sentence autoencoder model.
 
-python init/sentence_ae.py --batch_size 512 --save_checkpoint_steps 5000
+python initialization/sentence_ae.py --batch_size 512\
+  --save_checkpoint_steps 5000
 """
 
 from __future__ import absolute_import

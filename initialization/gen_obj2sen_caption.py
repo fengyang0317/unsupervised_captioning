@@ -1,6 +1,6 @@
 """Generate pseudo captions.
 
-python gen_obj2sen_caption.py --num_proc 64
+python initialization/gen_obj2sen_caption.py --num_proc 64
 """
 
 import multiprocessing

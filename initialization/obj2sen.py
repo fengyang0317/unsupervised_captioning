@@ -1,6 +1,6 @@
 """Train object-to-sentence model.
 
-python obj2sen.py --batch_size 512 --save_checkpoint_steps 5000
+python initialization/obj2sen.py --batch_size 512 --save_checkpoint_steps 5000
 """
 
 from __future__ import absolute_import

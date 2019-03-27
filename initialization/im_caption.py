@@ -1,6 +1,7 @@
 """Train sentence gan model.
 
-python im_caption.py --batch_size 512 --multi_gpu --save_checkpoint_steps 2000
+python initialization/im_caption.py --batch_size 512 --multi_gpu\
+  --save_checkpoint_steps 2000
 """
 
 from __future__ import absolute_import

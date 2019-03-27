@@ -1,3 +1,4 @@
+"""Convert the images and the detected object labels to tfrecords."""
 import os
 import pickle as pkl
 import random

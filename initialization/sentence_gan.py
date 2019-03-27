@@ -1,7 +1,7 @@
 """Train sentence gan model.
 
-python sentence_gan.py --batch_size 512 --save_checkpoint_steps 2000\
-  --gen_lr 0.0001 --dis_lr 0.0001
+python initialization/sentence_gan.py --batch_size 512
+  --save_checkpoint_steps 2000 --gen_lr 0.0001 --dis_lr 0.0001
 """
 
 from __future__ import absolute_import
