@@ -38,7 +38,9 @@ cd unsupervised_captioning
 export PYTHONPATH=$PYTHONPATH:`pwd`
 ```
 
-### Dataset (Optional. The files generated below can be found at [here][1]).
+### Dataset (Optional. The files generated below can be found at [Gdrive][1]).
+In case you do not have the access to Google, the files are also available at
+[One Drive][2].
 1. Crawl image descriptions. The descriptions used when conducting the
 experiments in the paper are available at
 [link](https://drive.google.com/file/d/1z8JwNxER-ORWoAmVKBqM7MyPozk6St4M).
@@ -170,4 +172,5 @@ https://github.com/tensorflow/models/tree/master/research/object_detection) and
 is crucial to training.
 
 [1]: https://drive.google.com/drive/folders/1ol8gLj6hYgluldvdj9XFKm16TCqOr7EE
+[2]: https://uofr-my.sharepoint.com/:f:/g/personal/yfeng23_ur_rochester_edu/EgDosCuY5t9HmlBfFsVyxdAB4xGf6aTJ0DmQlYWASdjYsw?e=Rhc4nS
 [detection_model]: http://download.tensorflow.org/models/object_detection/faster_rcnn_inception_resnet_v2_atrous_oid_2018_01_28.tar.gz
