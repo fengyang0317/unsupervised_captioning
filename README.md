@@ -22,7 +22,6 @@ reliance on paired data. For more details, please refer to our
 
 ### Requirements
 ```
-pip install -r requirements.txt
 mkdir ~/workspace
 cd ~/workspace
 git clone https://github.com/tensorflow/models.git tf_models
@@ -35,6 +34,7 @@ mkdir ckpt
 tar zxvf inception_v4_2016_09_09.tar.gz -C ckpt
 git clone https://github.com/fengyang0317/unsupervised_captioning.git
 cd unsupervised_captioning
+pip install -r requirements.txt
 export PYTHONPATH=$PYTHONPATH:`pwd`
 ```
 
