@@ -183,9 +183,9 @@ def input_fn(batch_size, subset='train'):
   sentence_ds = tf.data.TFRecordDataset('data/sentence.tfrec')
   num_val = NUM_DESCRIPTIONS // 50
   if subset == 'train':
-    sentence_ds.skip(num_val)
+    sentence_ds = sentence_ds.skip(num_val)
   else:
-    sentence_ds.take(num_val)
+    sentence_ds = sentence_ds.take(num_val)
   sentence_ds = sentence_ds.map(parse_sentence, num_parallel_calls=AUTOTUNE)
 
   sentence_ds = sentence_ds.filter(lambda k, lk, s, ls: tf.not_equal(lk, 0))
