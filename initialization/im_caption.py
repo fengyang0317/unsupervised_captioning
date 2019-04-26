@@ -180,6 +180,7 @@ def input_fn(batch_size):
   sentence_ds = sentence_ds.map(parse_sentence, num_parallel_calls=AUTOTUNE)
 
   dataset = tf.data.Dataset.zip((image_ds, sentence_ds))
+  dataset = dataset.filter(lambda im, sen: tf.not_equal(im[3], 0))
   dataset = dataset.map(take)
   dataset = dataset.apply(tf.contrib.data.shuffle_and_repeat(4096))
   dataset = batching_func(dataset, batch_size)
