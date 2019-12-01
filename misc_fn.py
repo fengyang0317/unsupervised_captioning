@@ -44,7 +44,7 @@ def transform_grads_fn(grads):
   """Gradient clip."""
   grads, vars = zip(*grads)
   grads, _ = tf.clip_by_global_norm(grads, 10)
-  return zip(grads, vars)
+  return list(zip(grads, vars))
 
 
 def crop_sentence(sentence, end):
